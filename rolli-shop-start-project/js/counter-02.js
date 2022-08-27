@@ -21,6 +21,24 @@ window.addEventListener('click', function (event) {
             
         if (parseInt(counter.innerHTML) > 1) {
             counter.innerText = --counter.innerHTML;
-        }      
+        }   else if
+        // проверка на товар в корзине
+        (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
+            
+            // удаляем товар из корзины
+            event.target.closest('.cart-item').remove();
+
+            // отображение статуса корзины (пустая/полная)
+        toggleCartStatus();    
+        calcCartPrice();    
+        }
     }   
+
+    // проверяем на кли + или - внутри корзины
+    if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
+        // и тут запускаем пересчет общей стоимости товаров
+        calcCartPrice();
+    }
+
+
 });
