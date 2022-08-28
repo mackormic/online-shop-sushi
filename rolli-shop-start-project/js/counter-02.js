@@ -30,14 +30,14 @@ window.addEventListener('click', function (event) {
 
             // отображение статуса корзины (пустая/полная)
         toggleCartStatus();    
-        calcCartPrice();    
+        calcCartPriceAndDelivery();    
         }
     }   
 
     // проверяем на кли + или - внутри корзины
     if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
         // и тут запускаем пересчет общей стоимости товаров
-        calcCartPrice();
+        calcCartPriceAndDelivery();
     }
 
 
