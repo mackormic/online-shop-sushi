@@ -22,7 +22,7 @@ function renderProducts(productsArray) {
   productsArray.forEach((element) => {
     const productsHTML = `<div class="col-md-6">
         <div class="card mb-4" data-id="${element.id}">
-            <img class="product-img" src="./img/roll/${element.imgSrc}" alt="">
+            <img class="product-img" data-id = "${element.id}" data-img = "modal" src="./img/roll/${element.imgSrc}" alt="">
             <div class="card-body text-center">
                 <h4 class="item-title">${element.title}</h4>
                 <p><small data-items-in-box class="text-muted">${element.itemInbox} шт.</small></p>
