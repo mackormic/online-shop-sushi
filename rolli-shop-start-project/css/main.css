@@ -218,6 +218,7 @@ h4 {
   transform: translate(-50%, -50%);
   z-index: 30; /* Должен быть выше чем у подложки*/
   transition: 2s all;
+  border: solid #6c757d;
 }
 
 .modalCard.active,
@@ -238,4 +239,12 @@ h4 {
   padding: 5px;
   top: 20px;
   right: 20px;
+}
+
+.btn-close:hover {
+  cursor: pointer;
+}
+
+.product-img:hover {
+  cursor: pointer;
 }
